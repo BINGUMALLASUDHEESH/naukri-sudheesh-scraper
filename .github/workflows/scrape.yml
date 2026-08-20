@@ -34,7 +34,10 @@ jobs:
         run: npm install
 
       - name: Install Playwright browser (Chromium)
-        run: npx playwright install --with-deps chromium
+        # Calling the CLI via `node` directly, instead of the `npx playwright`
+        # shim, avoids intermittent "Permission denied" errors on Actions
+        # runners where the shim script's executable bit isn't set.
+        run: node node_modules/playwright/cli.js install --with-deps chromium
 
       - name: Run scraper
         env:
