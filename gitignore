@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Playwright browser binaries (downloaded via `npx playwright install`)
+# Actions/local machines re-download these; no need to version them
+ms-playwright/
+
+# Raw per-page JSON snapshots (debugging aid, regenerated on every run)
+raw_pages/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.vscode/

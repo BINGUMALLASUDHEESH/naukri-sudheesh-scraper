@@ -9,10 +9,10 @@
  *   so a crash mid-run does not lose previously scraped data.
  *
  * Usage:
- *   node scrape-naukri.js            -> uses CONFIG.PAGES below (default 3)
- *   PAGES=3 node scrape-naukri.js    -> override via env var
- *   PAGES=ALL node scrape-naukri.js  -> scrape every page Naukri reports
- *   FORCE=1 node scrape-naukri.js    -> ignore log, re-scrape every page
+ *   node index.js            -> uses CONFIG.PAGES below (default 3, or PAGES env var)
+ *   PAGES=3 node index.js    -> override via env var
+ *   PAGES=ALL node index.js  -> scrape every page Naukri reports
+ *   FORCE=1 node index.js    -> ignore log, re-scrape every page
  * ---------------------------------------------------------------
  */
 
@@ -22,7 +22,9 @@ const path = require('path');
 
 // ------------------------- CONFIG -------------------------
 const CONFIG = {
-  PAGES: 4,
+  // 3 for local testing by default. Override with PAGES=ALL or PAGES=<n>
+  // as an environment variable (this is how the GitHub Actions workflow drives it).
+  PAGES: process.env.PAGES || 3,
   BASE_KEYWORD_PARAM: 'k=ai%20gen%20ai%20jobs',
   BASE_KEYWORD_PARAM_PLUS: 'k=ai+gen+ai+jobs', // used on paginated URLs, matches sample given
   FIRST_PAGE_URL: 'https://www.naukri.com/ai-gen-ai-jobs?k=ai%20gen%20ai%20jobs',
@@ -404,109 +406,6 @@ function resolveTotalPages(firstPageData) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const { chromium } = require('playwright');
-// const fs = require('fs');
-
-// (async () => {
-//   console.log('Launching browser...');
-
-//   const browser = await chromium.launch({
-//     headless: false,               // set true if you want headless
-//     args: [
-//       '--disable-blink-features=AutomationControlled',
-//       '--no-sandbox',
-//       '--disable-setuid-sandbox'
-//     ]
-//   });
-
-//   const context = await browser.newContext({
-//     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36',
-//     viewport: { width: 1366, height: 768 },
-//     locale: 'en-IN'
-//   });
-
-//   const page = await context.newPage();
-
-//   let apiResponse = null;
-
-//   // Listen for the job search API
-//   page.on('response', async (response) => {
-//     const url = response.url();
-//     if (url.includes('/jobapi/v3/search') && response.status() === 200) {
-//       try {
-//         const data = await response.json();
-//         apiResponse = data;
-//         console.log('✅ Successfully captured API response!');
-//       } catch (err) {
-//         console.log('Failed to parse JSON:', err.message);
-//       }
-//     }
-//   });
-
-//   console.log('Opening Naukri page...');
-//   await page.goto('https://www.naukri.com/ai-gen-ai-jobs?k=ai%20gen%20ai%20jobs', {
-//     waitUntil: 'networkidle',
-//     timeout: 60000
-//   });
-
-//   console.log('Waiting for API response...');
-//   await page.waitForTimeout(8000);
-
-//   // Save the response
-//   if (apiResponse) {
-//     fs.writeFileSync('naukri-jobs.json', JSON.stringify(apiResponse, null, 2));
-//     console.log('📁 Response saved to naukri-jobs.json');
-//     console.log(`Total jobs found: ${apiResponse.noOfJobs || 'N/A'}`);
-//   } else {
-//     console.log('❌ No API response captured. Maybe captcha appeared.');
-//   }
-
-//   // Keep browser open for 10 seconds so you can see
-//   await page.waitForTimeout(10000);
-
-//   await browser.close();
-//   console.log('Done.');
-// })();
 
 
 

@@ -1,0 +1,54 @@
+name: Naukri Job Scraper
+
+on:
+  # Lets you click "Run workflow" manually from the Actions tab,
+  # and choose how many pages to scrape in this run.
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: "Number of pages to scrape (or ALL). Use ALL for scheduled runs to keep advancing past what's already done."
+        required: false
+        default: "3"
+
+  # Runs automatically every 3 hours so 1000+ pages get chipped away
+  # over time without you needing to babysit it.
+  # Adjust or remove this if you only want manual runs.
+  schedule:
+    - cron: "0 */3 * * *"
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340 # stay under the 6-hour free-tier job limit
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browser (Chromium)
+        run: npx playwright install --with-deps chromium
+
+      - name: Run scraper
+        env:
+          # ALL means: keep going through every page, skipping ones
+          # already marked COMPLETED in scrape_log.txt. This is what
+          # lets consecutive scheduled runs actually make forward
+          # progress instead of re-checking the same page range.
+          PAGES: ${{ github.event.inputs.pages || 'ALL' }}
+        run: xvfb-run -a node index.js
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add naukri_jobs.csv scrape_log.txt
+          git diff --cached --quiet || git commit -m "Scrape update: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
