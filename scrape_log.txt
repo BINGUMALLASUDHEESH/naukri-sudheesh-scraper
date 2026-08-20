@@ -1,0 +1,8 @@
+[2026-08-20T06:52:10.371Z] Starting fresh run (no completed pages found in log, or FORCE=1 was set).
+[2026-08-20T06:52:14.826Z] PAGE 1 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs?k=ai%20gen%20ai%20jobs
+[2026-08-20T06:52:26.817Z] PAGE 1 COMPLETED - 20 jobs written
+[2026-08-20T06:52:26.817Z] PAGE 2 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-2?k=ai+gen+ai+jobs
+[2026-08-20T06:52:38.204Z] PAGE 2 COMPLETED - 20 jobs written
+[2026-08-20T06:52:41.206Z] PAGE 3 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-3?k=ai+gen+ai+jobs
+[2026-08-20T06:52:52.067Z] PAGE 3 COMPLETED - 20 jobs written
+[2026-08-20T06:52:55.071Z] Run finished. Total pages targeted: 3. Completed pages: [1, 2, 3]
