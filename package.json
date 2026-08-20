@@ -1,0 +1,15 @@
+{
+  "name": "naukri-scraper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Resumable Naukri.com job listing scraper with CSV export and page-level logging",
+  "main": "scrape-naukri.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:all": "PAGES=ALL node scrape-naukri.js",
+    "start:force": "FORCE=1 node scrape-naukri.js"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}
