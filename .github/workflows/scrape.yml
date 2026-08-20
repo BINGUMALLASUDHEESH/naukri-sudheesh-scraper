@@ -1,32 +1,37 @@
-name: Naukri Job Scraper
+name: Naukri Job Scraper (Parallel - 15 shards)
+
+permissions:
+  contents: write # needed for the merge job's final commit/push
+
+# Prevents two separate triggers of this whole workflow from running at
+# once (each spawns 15+ jobs; two overlapping runs would double that and
+# also race on the final merge/push).
+concurrency:
+  group: naukri-scraper
+  cancel-in-progress: false
 
 on:
-  # Lets you click "Run workflow" manually from the Actions tab,
-  # and choose how many pages to scrape in this run.
-  workflow_dispatch:
-    inputs:
-      pages:
-        description: "Number of pages to scrape (or ALL). Use ALL for scheduled runs to keep advancing past what's already done."
-        required: false
-        default: "3"
-
-  # Runs automatically every 3 hours so 1000+ pages get chipped away
-  # over time without you needing to babysit it.
-  # Adjust or remove this if you only want manual runs.
+  workflow_dispatch: {}
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 */6 * * *" # every 6 hours; adjust as needed
+
+env:
+  SHARD_COUNT: 15
 
 jobs:
-  scrape:
+  # ------------------------------------------------------------------
+  # JOB 1: Fetch page 1 once, work out the total page count, and expose
+  # it as an output so the 15 shards below can each compute their own
+  # page range without every shard re-fetching page 1 separately.
+  # ------------------------------------------------------------------
+  resolve:
     runs-on: ubuntu-latest
-    timeout-minutes: 340 # stay under the 6-hour free-tier job limit
-
+    outputs:
+      total_pages: ${{ steps.resolve-step.outputs.total_pages }}
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "20"
 
@@ -34,24 +39,233 @@ jobs:
         run: npm install
 
       - name: Install Playwright browser (Chromium)
-        # Calling the CLI via `node` directly, instead of the `npx playwright`
-        # shim, avoids intermittent "Permission denied" errors on Actions
-        # runners where the shim script's executable bit isn't set.
         run: node node_modules/playwright/cli.js install --with-deps chromium
 
-      - name: Run scraper
+      - name: Resolve total page count
+        id: resolve-step
         env:
-          # ALL means: keep going through every page, skipping ones
-          # already marked COMPLETED in scrape_log.txt. This is what
-          # lets consecutive scheduled runs actually make forward
-          # progress instead of re-checking the same page range.
-          PAGES: ${{ github.event.inputs.pages || 'ALL' }}
+          RESOLVE_ONLY: "1"
         run: xvfb-run -a node index.js
 
-      - name: Commit and push results
+  # ------------------------------------------------------------------
+  # JOB 2: 15 parallel shards. Each one scrapes a distinct slice of the
+  # total pages and writes its own naukri_jobs_shard<N>.csv and
+  # scrape_log_shard<N>.txt, then uploads them as a build artifact
+  # (no git push here - avoids 15 runners fighting over the same commit).
+  # ------------------------------------------------------------------
+  scrape:
+    needs: resolve
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false # one shard failing shouldn't cancel the other 14
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browser (Chromium)
+        run: node node_modules/playwright/cli.js install --with-deps chromium
+
+      - name: Compute this shard's page range
+        id: range
+        run: |
+          TOTAL=${{ needs.resolve.outputs.total_pages }}
+          N=${{ env.SHARD_COUNT }}
+          SHARD=${{ matrix.shard }}
+          CHUNK=$(( (TOTAL + N - 1) / N ))
+          START=$(( (SHARD - 1) * CHUNK + 1 ))
+          END=$(( SHARD * CHUNK ))
+          if [ "$END" -gt "$TOTAL" ]; then END=$TOTAL; fi
+          echo "start=$START" >> "$GITHUB_OUTPUT"
+          echo "end=$END" >> "$GITHUB_OUTPUT"
+          echo "Shard ${SHARD}/${N}: pages ${START}-${END} (of ${TOTAL} total)"
+
+      - name: Run scraper for this shard
+        env:
+          SHARD_ID: ${{ matrix.shard }}
+          START_PAGE: ${{ steps.range.outputs.start }}
+          END_PAGE: ${{ steps.range.outputs.end }}
+        run: xvfb-run -a node index.js
+
+      - name: Upload this shard's CSV and log as an artifact
+        if: always() # upload even if the shard hit errors, so partial progress isn't lost
+        uses: actions/upload-artifact@v4
+        with:
+          name: shard-${{ matrix.shard }}-results
+          path: |
+            naukri_jobs_shard${{ matrix.shard }}.csv
+            scrape_log_shard${{ matrix.shard }}.txt
+          if-no-files-found: warn
+          retention-days: 14
+
+  # ------------------------------------------------------------------
+  # JOB 3: Runs after all 15 shards finish. Downloads every shard's
+  # artifact, commits the 15 individual CSV/log files to the repo, and
+  # also builds one merged naukri_jobs_all.csv for convenience.
+  # ------------------------------------------------------------------
+  merge:
+    needs: scrape
+    if: always() # still merge whatever succeeded, even if some shards failed
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download all shard artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*-results
+          path: shard-artifacts
+          merge-multiple: true
+
+      - name: Move shard files into repo root
+        run: |
+          mkdir -p shard-artifacts
+          cp shard-artifacts/*.csv . 2>/dev/null || true
+          cp shard-artifacts/*.txt . 2>/dev/null || true
+          ls -la naukri_jobs_shard*.csv scrape_log_shard*.txt 2>/dev/null || echo "No shard files found yet"
+
+      - name: Build one merged CSV (header once, then all data rows)
+        run: |
+          FIRST=1
+          : > naukri_jobs_all.csv
+          for f in naukri_jobs_shard*.csv; do
+            [ -e "$f" ] || continue
+            if [ "$FIRST" = "1" ]; then
+              cat "$f" >> naukri_jobs_all.csv
+              FIRST=0
+            else
+              tail -n +2 "$f" >> naukri_jobs_all.csv
+            fi
+          done
+          echo "Merged row count (incl. header):"
+          wc -l naukri_jobs_all.csv || true
+
+      - name: Commit and push all results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add naukri_jobs.csv scrape_log.txt
-          git diff --cached --quiet || git commit -m "Scrape update: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git add naukri_jobs_shard*.csv scrape_log_shard*.txt naukri_jobs_all.csv 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "Parallel scrape update: $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# name: Naukri Job Scraper
+
+# on:
+#   # Lets you click "Run workflow" manually from the Actions tab,
+#   # and choose how many pages to scrape in this run.
+#   workflow_dispatch:
+#     inputs:
+#       pages:
+#         description: "Number of pages to scrape (or ALL). Use ALL for scheduled runs to keep advancing past what's already done."
+#         required: false
+#         default: "3"
+
+#   # Runs automatically every 3 hours so 1000+ pages get chipped away
+#   # over time without you needing to babysit it.
+#   # Adjust or remove this if you only want manual runs.
+#   schedule:
+#     - cron: "0 */3 * * *"
+
+# jobs:
+#   scrape:
+#     runs-on: ubuntu-latest
+#     timeout-minutes: 340 # stay under the 6-hour free-tier job limit
+
+#     steps:
+#       - name: Checkout repo
+#         uses: actions/checkout@v4
+
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: "20"
+
+#       - name: Install dependencies
+#         run: npm install
+
+#       - name: Install Playwright browser (Chromium)
+#         # Calling the CLI via `node` directly, instead of the `npx playwright`
+#         # shim, avoids intermittent "Permission denied" errors on Actions
+#         # runners where the shim script's executable bit isn't set.
+#         run: node node_modules/playwright/cli.js install --with-deps chromium
+
+#       - name: Run scraper
+#         env:
+#           # ALL means: keep going through every page, skipping ones
+#           # already marked COMPLETED in scrape_log.txt. This is what
+#           # lets consecutive scheduled runs actually make forward
+#           # progress instead of re-checking the same page range.
+#           PAGES: ${{ github.event.inputs.pages || 'ALL' }}
+#         run: xvfb-run -a node index.js
+
+#       - name: Commit and push results
+#         run: |
+#           git config user.name "github-actions[bot]"
+#           git config user.email "github-actions[bot]@users.noreply.github.com"
+#           git add naukri_jobs.csv scrape_log.txt
+#           git diff --cached --quiet || git commit -m "Scrape update: $(date -u +'%Y-%m-%d %H:%M UTC')"
+#           git push
