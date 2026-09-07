@@ -1,0 +1,48 @@
+name: Cleanup CSV and TXT files
+
+on:
+  workflow_dispatch:
+    inputs:
+      folder:
+        description: 'Folder to clean (relative to repo root, e.g. "data" or "." for repo root)'
+        required: true
+        default: '.'
+      dry_run:
+        description: 'Dry run only (list files, do not delete)'
+        required: true
+        type: boolean
+        default: true
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: List files that will be deleted
+        run: |
+          echo "Looking inside: ${{ github.event.inputs.folder }}"
+          if [ ! -d "${{ github.event.inputs.folder }}" ]; then
+            echo "::error::Folder '${{ github.event.inputs.folder }}' does not exist in this repo. Check the input and try again."
+            exit 1
+          fi
+          find "${{ github.event.inputs.folder }}" -type f \( -iname "*.csv" -o -iname "*.txt" \) -print
+
+      - name: Delete CSV and TXT files
+        if: ${{ github.event.inputs.dry_run == 'false' }}
+        run: |
+          find "${{ github.event.inputs.folder }}" -type f \( -iname "*.csv" -o -iname "*.txt" \) -delete
+
+      - name: Commit and push deletion
+        if: ${{ github.event.inputs.dry_run == 'false' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit — no matching files were found."
+          else
+            git commit -m "Remove .csv and .txt files from ${{ github.event.inputs.folder }}"
+            git push
+          fi
