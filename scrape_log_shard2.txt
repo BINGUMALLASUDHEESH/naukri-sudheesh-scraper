@@ -1,0 +1,291 @@
+[2026-10-29T08:23:15.420Z] [shard 2] Starting fresh run (no completed pages found in log, or FORCE=1 was set).
+[2026-10-29T08:23:16.411Z] [shard 2] SHARDED MODE: scraping pages 115-228
+[2026-10-29T08:23:16.411Z] [shard 2] PAGE 115 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-115?k=ai+gen+ai+jobs
+[2026-10-29T08:23:28.135Z] [shard 2] PAGE 115 COMPLETED - 20 jobs written
+[2026-10-29T08:23:31.139Z] [shard 2] PAGE 116 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-116?k=ai+gen+ai+jobs
+[2026-10-29T08:23:42.528Z] [shard 2] PAGE 116 COMPLETED - 20 jobs written
+[2026-10-29T08:23:45.531Z] [shard 2] PAGE 117 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-117?k=ai+gen+ai+jobs
+[2026-10-29T08:23:57.197Z] [shard 2] PAGE 117 COMPLETED - 20 jobs written
+[2026-10-29T08:24:00.200Z] [shard 2] PAGE 118 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-118?k=ai+gen+ai+jobs
+[2026-10-29T08:24:11.660Z] [shard 2] PAGE 118 COMPLETED - 20 jobs written
+[2026-10-29T08:24:14.664Z] [shard 2] PAGE 119 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-119?k=ai+gen+ai+jobs
+[2026-10-29T08:24:26.676Z] [shard 2] PAGE 119 COMPLETED - 20 jobs written
+[2026-10-29T08:24:29.679Z] [shard 2] PAGE 120 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-120?k=ai+gen+ai+jobs
+[2026-10-29T08:24:41.297Z] [shard 2] PAGE 120 COMPLETED - 20 jobs written
+[2026-10-29T08:24:44.300Z] [shard 2] PAGE 121 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-121?k=ai+gen+ai+jobs
+[2026-10-29T08:24:55.782Z] [shard 2] PAGE 121 COMPLETED - 20 jobs written
+[2026-10-29T08:24:58.785Z] [shard 2] PAGE 122 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-122?k=ai+gen+ai+jobs
+[2026-10-29T08:25:09.932Z] [shard 2] PAGE 122 COMPLETED - 20 jobs written
+[2026-10-29T08:25:12.935Z] [shard 2] PAGE 123 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-123?k=ai+gen+ai+jobs
+[2026-10-29T08:25:24.441Z] [shard 2] PAGE 123 COMPLETED - 20 jobs written
+[2026-10-29T08:25:27.444Z] [shard 2] PAGE 124 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-124?k=ai+gen+ai+jobs
+[2026-10-29T08:25:38.723Z] [shard 2] PAGE 124 COMPLETED - 20 jobs written
+[2026-10-29T08:25:41.727Z] [shard 2] PAGE 125 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-125?k=ai+gen+ai+jobs
+[2026-10-29T08:26:41.792Z] [shard 2] PAGE 125 attempt 1 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-125?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T08:26:44.796Z] [shard 2] PAGE 125 attempt 2/3 - loading https://www.naukri.com/ai-gen-ai-jobs-125?k=ai+gen+ai+jobs
+[2026-10-29T08:27:44.914Z] [shard 2] PAGE 125 attempt 2 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-125?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T08:27:47.918Z] [shard 2] PAGE 125 attempt 3/3 - loading https://www.naukri.com/ai-gen-ai-jobs-125?k=ai+gen+ai+jobs
+[2026-10-29T08:27:59.210Z] [shard 2] PAGE 125 COMPLETED - 20 jobs written
+[2026-10-29T08:28:02.214Z] [shard 2] PAGE 126 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-126?k=ai+gen+ai+jobs
+[2026-10-29T08:28:14.334Z] [shard 2] PAGE 126 COMPLETED - 20 jobs written
+[2026-10-29T08:28:17.337Z] [shard 2] PAGE 127 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-127?k=ai+gen+ai+jobs
+[2026-10-29T08:28:31.675Z] [shard 2] PAGE 127 COMPLETED - 20 jobs written
+[2026-10-29T08:28:34.679Z] [shard 2] PAGE 128 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-128?k=ai+gen+ai+jobs
+[2026-10-29T08:28:45.946Z] [shard 2] PAGE 128 COMPLETED - 20 jobs written
+[2026-10-29T08:28:48.949Z] [shard 2] PAGE 129 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-129?k=ai+gen+ai+jobs
+[2026-10-29T08:29:00.271Z] [shard 2] PAGE 129 COMPLETED - 20 jobs written
+[2026-10-29T08:29:03.274Z] [shard 2] PAGE 130 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-130?k=ai+gen+ai+jobs
+[2026-10-29T08:29:14.383Z] [shard 2] PAGE 130 COMPLETED - 20 jobs written
+[2026-10-29T08:29:17.386Z] [shard 2] PAGE 131 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-131?k=ai+gen+ai+jobs
+[2026-10-29T08:29:28.656Z] [shard 2] PAGE 131 COMPLETED - 20 jobs written
+[2026-10-29T08:29:31.660Z] [shard 2] PAGE 132 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-132?k=ai+gen+ai+jobs
+[2026-10-29T08:29:43.254Z] [shard 2] PAGE 132 COMPLETED - 20 jobs written
+[2026-10-29T08:29:46.257Z] [shard 2] PAGE 133 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-133?k=ai+gen+ai+jobs
+[2026-10-29T08:29:57.389Z] [shard 2] PAGE 133 COMPLETED - 20 jobs written
+[2026-10-29T08:30:00.391Z] [shard 2] PAGE 134 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-134?k=ai+gen+ai+jobs
+[2026-10-29T08:30:12.098Z] [shard 2] PAGE 134 COMPLETED - 20 jobs written
+[2026-10-29T08:30:15.101Z] [shard 2] PAGE 135 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-135?k=ai+gen+ai+jobs
+[2026-10-29T08:30:26.559Z] [shard 2] PAGE 135 COMPLETED - 20 jobs written
+[2026-10-29T08:30:29.562Z] [shard 2] PAGE 136 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-136?k=ai+gen+ai+jobs
+[2026-10-29T08:30:41.264Z] [shard 2] PAGE 136 COMPLETED - 20 jobs written
+[2026-10-29T08:30:44.267Z] [shard 2] PAGE 137 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-137?k=ai+gen+ai+jobs
+[2026-10-29T08:30:55.494Z] [shard 2] PAGE 137 COMPLETED - 20 jobs written
+[2026-10-29T08:30:58.497Z] [shard 2] PAGE 138 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-138?k=ai+gen+ai+jobs
+[2026-10-29T08:31:10.022Z] [shard 2] PAGE 138 COMPLETED - 20 jobs written
+[2026-10-29T08:31:13.025Z] [shard 2] PAGE 139 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-139?k=ai+gen+ai+jobs
+[2026-10-29T08:31:24.481Z] [shard 2] PAGE 139 COMPLETED - 20 jobs written
+[2026-10-29T08:31:27.485Z] [shard 2] PAGE 140 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-140?k=ai+gen+ai+jobs
+[2026-10-29T08:31:38.583Z] [shard 2] PAGE 140 COMPLETED - 20 jobs written
+[2026-10-29T08:31:41.586Z] [shard 2] PAGE 141 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-141?k=ai+gen+ai+jobs
+[2026-10-29T08:31:52.703Z] [shard 2] PAGE 141 COMPLETED - 20 jobs written
+[2026-10-29T08:31:55.710Z] [shard 2] PAGE 142 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-142?k=ai+gen+ai+jobs
+[2026-10-29T08:32:07.061Z] [shard 2] PAGE 142 COMPLETED - 20 jobs written
+[2026-10-29T08:32:10.064Z] [shard 2] PAGE 143 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-143?k=ai+gen+ai+jobs
+[2026-10-29T08:32:24.039Z] [shard 2] PAGE 143 COMPLETED - 20 jobs written
+[2026-10-29T08:32:27.043Z] [shard 2] PAGE 144 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-144?k=ai+gen+ai+jobs
+[2026-10-29T08:32:40.474Z] [shard 2] PAGE 144 COMPLETED - 20 jobs written
+[2026-10-29T08:32:43.477Z] [shard 2] PAGE 145 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-145?k=ai+gen+ai+jobs
+[2026-10-29T08:32:54.638Z] [shard 2] PAGE 145 COMPLETED - 20 jobs written
+[2026-10-29T08:32:57.641Z] [shard 2] PAGE 146 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-146?k=ai+gen+ai+jobs
+[2026-10-29T08:33:08.915Z] [shard 2] PAGE 146 COMPLETED - 20 jobs written
+[2026-10-29T08:33:11.918Z] [shard 2] PAGE 147 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-147?k=ai+gen+ai+jobs
+[2026-10-29T08:33:23.032Z] [shard 2] PAGE 147 COMPLETED - 20 jobs written
+[2026-10-29T08:33:26.039Z] [shard 2] PAGE 148 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-148?k=ai+gen+ai+jobs
+[2026-10-29T08:33:37.182Z] [shard 2] PAGE 148 COMPLETED - 20 jobs written
+[2026-10-29T08:33:40.186Z] [shard 2] PAGE 149 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-149?k=ai+gen+ai+jobs
+[2026-10-29T08:33:51.402Z] [shard 2] PAGE 149 COMPLETED - 20 jobs written
+[2026-10-29T08:33:54.405Z] [shard 2] PAGE 150 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-150?k=ai+gen+ai+jobs
+[2026-10-29T08:34:05.719Z] [shard 2] PAGE 150 COMPLETED - 20 jobs written
+[2026-10-29T08:34:08.722Z] [shard 2] PAGE 151 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-151?k=ai+gen+ai+jobs
+[2026-10-29T08:34:27.017Z] [shard 2] PAGE 151 COMPLETED - 20 jobs written
+[2026-10-29T08:34:30.023Z] [shard 2] PAGE 152 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-152?k=ai+gen+ai+jobs
+[2026-10-29T08:34:42.919Z] [shard 2] PAGE 152 COMPLETED - 20 jobs written
+[2026-10-29T08:34:45.923Z] [shard 2] PAGE 153 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-153?k=ai+gen+ai+jobs
+[2026-10-29T08:34:58.382Z] [shard 2] PAGE 153 COMPLETED - 20 jobs written
+[2026-10-29T08:35:01.385Z] [shard 2] PAGE 154 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-154?k=ai+gen+ai+jobs
+[2026-10-29T08:35:13.585Z] [shard 2] PAGE 154 COMPLETED - 20 jobs written
+[2026-10-29T08:35:16.587Z] [shard 2] PAGE 155 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-155?k=ai+gen+ai+jobs
+[2026-10-29T08:35:29.067Z] [shard 2] PAGE 155 COMPLETED - 20 jobs written
+[2026-10-29T08:35:32.071Z] [shard 2] PAGE 156 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-156?k=ai+gen+ai+jobs
+[2026-10-29T08:35:44.237Z] [shard 2] PAGE 156 COMPLETED - 20 jobs written
+[2026-10-29T08:35:47.240Z] [shard 2] PAGE 157 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-157?k=ai+gen+ai+jobs
+[2026-10-29T08:36:00.029Z] [shard 2] PAGE 157 COMPLETED - 20 jobs written
+[2026-10-29T08:36:03.033Z] [shard 2] PAGE 158 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-158?k=ai+gen+ai+jobs
+[2026-10-29T08:36:17.297Z] [shard 2] PAGE 158 COMPLETED - 20 jobs written
+[2026-10-29T08:36:20.300Z] [shard 2] PAGE 159 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-159?k=ai+gen+ai+jobs
+[2026-10-29T08:36:34.910Z] [shard 2] PAGE 159 COMPLETED - 20 jobs written
+[2026-10-29T08:36:37.914Z] [shard 2] PAGE 160 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-160?k=ai+gen+ai+jobs
+[2026-10-29T08:36:50.062Z] [shard 2] PAGE 160 COMPLETED - 20 jobs written
+[2026-10-29T08:36:53.066Z] [shard 2] PAGE 161 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-161?k=ai+gen+ai+jobs
+[2026-10-29T08:37:05.802Z] [shard 2] PAGE 161 COMPLETED - 20 jobs written
+[2026-10-29T08:37:08.806Z] [shard 2] PAGE 162 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-162?k=ai+gen+ai+jobs
+[2026-10-29T08:37:20.874Z] [shard 2] PAGE 162 COMPLETED - 20 jobs written
+[2026-10-29T08:37:23.877Z] [shard 2] PAGE 163 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-163?k=ai+gen+ai+jobs
+[2026-10-29T08:37:36.051Z] [shard 2] PAGE 163 COMPLETED - 20 jobs written
+[2026-10-29T08:37:39.058Z] [shard 2] PAGE 164 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-164?k=ai+gen+ai+jobs
+[2026-10-29T08:37:51.211Z] [shard 2] PAGE 164 COMPLETED - 20 jobs written
+[2026-10-29T08:37:54.212Z] [shard 2] PAGE 165 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-165?k=ai+gen+ai+jobs
+[2026-10-29T08:38:07.552Z] [shard 2] PAGE 165 COMPLETED - 20 jobs written
+[2026-10-29T08:38:10.555Z] [shard 2] PAGE 166 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-166?k=ai+gen+ai+jobs
+[2026-10-29T08:38:24.235Z] [shard 2] PAGE 166 COMPLETED - 20 jobs written
+[2026-10-29T08:38:27.238Z] [shard 2] PAGE 167 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-167?k=ai+gen+ai+jobs
+[2026-10-29T08:38:40.790Z] [shard 2] PAGE 167 COMPLETED - 20 jobs written
+[2026-10-29T08:38:43.793Z] [shard 2] PAGE 168 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-168?k=ai+gen+ai+jobs
+[2026-10-29T08:38:56.274Z] [shard 2] PAGE 168 COMPLETED - 20 jobs written
+[2026-10-29T08:38:59.281Z] [shard 2] PAGE 169 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-169?k=ai+gen+ai+jobs
+[2026-10-29T08:39:11.403Z] [shard 2] PAGE 169 COMPLETED - 20 jobs written
+[2026-10-29T08:39:14.406Z] [shard 2] PAGE 170 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-170?k=ai+gen+ai+jobs
+[2026-10-29T08:39:26.506Z] [shard 2] PAGE 170 COMPLETED - 20 jobs written
+[2026-10-29T08:39:29.506Z] [shard 2] PAGE 171 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-171?k=ai+gen+ai+jobs
+[2026-10-29T08:39:41.689Z] [shard 2] PAGE 171 COMPLETED - 20 jobs written
+[2026-10-29T08:39:44.692Z] [shard 2] PAGE 172 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-172?k=ai+gen+ai+jobs
+[2026-10-29T08:39:57.009Z] [shard 2] PAGE 172 COMPLETED - 20 jobs written
+[2026-10-29T08:40:00.012Z] [shard 2] PAGE 173 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-173?k=ai+gen+ai+jobs
+[2026-10-29T08:41:00.098Z] [shard 2] PAGE 173 attempt 1 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-173?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T08:41:03.100Z] [shard 2] PAGE 173 attempt 2/3 - loading https://www.naukri.com/ai-gen-ai-jobs-173?k=ai+gen+ai+jobs
+[2026-10-29T08:42:03.202Z] [shard 2] PAGE 173 attempt 2 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-173?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T08:42:06.206Z] [shard 2] PAGE 173 attempt 3/3 - loading https://www.naukri.com/ai-gen-ai-jobs-173?k=ai+gen+ai+jobs
+[2026-10-29T08:42:19.718Z] [shard 2] PAGE 173 COMPLETED - 20 jobs written
+[2026-10-29T08:42:22.722Z] [shard 2] PAGE 174 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-174?k=ai+gen+ai+jobs
+[2026-10-29T08:42:37.277Z] [shard 2] PAGE 174 COMPLETED - 20 jobs written
+[2026-10-29T08:42:40.277Z] [shard 2] PAGE 175 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-175?k=ai+gen+ai+jobs
+[2026-10-29T08:42:52.590Z] [shard 2] PAGE 175 COMPLETED - 20 jobs written
+[2026-10-29T08:42:55.593Z] [shard 2] PAGE 176 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-176?k=ai+gen+ai+jobs
+[2026-10-29T08:43:07.891Z] [shard 2] PAGE 176 COMPLETED - 20 jobs written
+[2026-10-29T08:43:10.895Z] [shard 2] PAGE 177 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-177?k=ai+gen+ai+jobs
+[2026-10-29T08:43:23.252Z] [shard 2] PAGE 177 COMPLETED - 20 jobs written
+[2026-10-29T08:43:26.255Z] [shard 2] PAGE 178 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-178?k=ai+gen+ai+jobs
+[2026-10-29T08:43:38.718Z] [shard 2] PAGE 178 COMPLETED - 20 jobs written
+[2026-10-29T08:43:41.721Z] [shard 2] PAGE 179 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-179?k=ai+gen+ai+jobs
+[2026-10-29T08:43:53.920Z] [shard 2] PAGE 179 COMPLETED - 20 jobs written
+[2026-10-29T08:43:56.923Z] [shard 2] PAGE 180 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-180?k=ai+gen+ai+jobs
+[2026-10-29T08:44:09.372Z] [shard 2] PAGE 180 COMPLETED - 20 jobs written
+[2026-10-29T08:44:12.375Z] [shard 2] PAGE 181 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-181?k=ai+gen+ai+jobs
+[2026-10-29T08:45:12.474Z] [shard 2] PAGE 181 attempt 1 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-181?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T08:45:15.475Z] [shard 2] PAGE 181 attempt 2/3 - loading https://www.naukri.com/ai-gen-ai-jobs-181?k=ai+gen+ai+jobs
+[2026-10-29T08:45:27.952Z] [shard 2] PAGE 181 COMPLETED - 20 jobs written
+[2026-10-29T08:45:30.955Z] [shard 2] PAGE 182 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-182?k=ai+gen+ai+jobs
+[2026-10-29T08:45:43.499Z] [shard 2] PAGE 182 COMPLETED - 20 jobs written
+[2026-10-29T08:45:46.503Z] [shard 2] PAGE 183 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-183?k=ai+gen+ai+jobs
+[2026-10-29T08:45:58.937Z] [shard 2] PAGE 183 COMPLETED - 20 jobs written
+[2026-10-29T08:46:01.941Z] [shard 2] PAGE 184 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-184?k=ai+gen+ai+jobs
+[2026-10-29T08:47:02.050Z] [shard 2] PAGE 184 attempt 1 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-184?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T08:47:05.054Z] [shard 2] PAGE 184 attempt 2/3 - loading https://www.naukri.com/ai-gen-ai-jobs-184?k=ai+gen+ai+jobs
+[2026-10-29T08:48:05.121Z] [shard 2] PAGE 184 attempt 2 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-184?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T08:48:08.125Z] [shard 2] PAGE 184 attempt 3/3 - loading https://www.naukri.com/ai-gen-ai-jobs-184?k=ai+gen+ai+jobs
+[2026-10-29T08:48:21.674Z] [shard 2] PAGE 184 COMPLETED - 20 jobs written
+[2026-10-29T08:48:24.678Z] [shard 2] PAGE 185 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-185?k=ai+gen+ai+jobs
+[2026-10-29T08:48:42.709Z] [shard 2] PAGE 185 COMPLETED - 20 jobs written
+[2026-10-29T08:48:45.712Z] [shard 2] PAGE 186 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-186?k=ai+gen+ai+jobs
+[2026-10-29T08:48:58.223Z] [shard 2] PAGE 186 COMPLETED - 20 jobs written
+[2026-10-29T08:49:01.227Z] [shard 2] PAGE 187 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-187?k=ai+gen+ai+jobs
+[2026-10-29T08:49:13.297Z] [shard 2] PAGE 187 COMPLETED - 20 jobs written
+[2026-10-29T08:49:16.300Z] [shard 2] PAGE 188 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-188?k=ai+gen+ai+jobs
+[2026-10-29T08:49:28.712Z] [shard 2] PAGE 188 COMPLETED - 20 jobs written
+[2026-10-29T08:49:31.716Z] [shard 2] PAGE 189 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-189?k=ai+gen+ai+jobs
+[2026-10-29T08:49:44.278Z] [shard 2] PAGE 189 COMPLETED - 20 jobs written
+[2026-10-29T08:49:47.281Z] [shard 2] PAGE 190 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-190?k=ai+gen+ai+jobs
+[2026-10-29T08:49:59.579Z] [shard 2] PAGE 190 COMPLETED - 20 jobs written
+[2026-10-29T08:50:02.582Z] [shard 2] PAGE 191 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-191?k=ai+gen+ai+jobs
+[2026-10-29T08:50:17.233Z] [shard 2] PAGE 191 COMPLETED - 20 jobs written
+[2026-10-29T08:50:20.236Z] [shard 2] PAGE 192 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-192?k=ai+gen+ai+jobs
+[2026-10-29T08:50:34.720Z] [shard 2] PAGE 192 COMPLETED - 20 jobs written
+[2026-10-29T08:50:37.723Z] [shard 2] PAGE 193 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-193?k=ai+gen+ai+jobs
+[2026-10-29T08:50:50.585Z] [shard 2] PAGE 193 COMPLETED - 20 jobs written
+[2026-10-29T08:50:53.588Z] [shard 2] PAGE 194 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-194?k=ai+gen+ai+jobs
+[2026-10-29T08:51:06.205Z] [shard 2] PAGE 194 COMPLETED - 20 jobs written
+[2026-10-29T08:51:09.208Z] [shard 2] PAGE 195 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-195?k=ai+gen+ai+jobs
+[2026-10-29T08:51:21.477Z] [shard 2] PAGE 195 COMPLETED - 20 jobs written
+[2026-10-29T08:51:24.480Z] [shard 2] PAGE 196 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-196?k=ai+gen+ai+jobs
+[2026-10-29T08:51:36.696Z] [shard 2] PAGE 196 COMPLETED - 20 jobs written
+[2026-10-29T08:51:39.700Z] [shard 2] PAGE 197 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-197?k=ai+gen+ai+jobs
+[2026-10-29T08:51:52.484Z] [shard 2] PAGE 197 COMPLETED - 20 jobs written
+[2026-10-29T08:51:55.487Z] [shard 2] PAGE 198 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-198?k=ai+gen+ai+jobs
+[2026-10-29T08:52:08.898Z] [shard 2] PAGE 198 COMPLETED - 20 jobs written
+[2026-10-29T08:52:11.901Z] [shard 2] PAGE 199 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-199?k=ai+gen+ai+jobs
+[2026-10-29T08:52:26.682Z] [shard 2] PAGE 199 COMPLETED - 20 jobs written
+[2026-10-29T08:52:29.682Z] [shard 2] PAGE 200 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-200?k=ai+gen+ai+jobs
+[2026-10-29T08:52:43.185Z] [shard 2] PAGE 200 COMPLETED - 20 jobs written
+[2026-10-29T08:52:46.189Z] [shard 2] PAGE 201 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-201?k=ai+gen+ai+jobs
+[2026-10-29T08:53:46.298Z] [shard 2] PAGE 201 attempt 1 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-201?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T08:53:49.301Z] [shard 2] PAGE 201 attempt 2/3 - loading https://www.naukri.com/ai-gen-ai-jobs-201?k=ai+gen+ai+jobs
+[2026-10-29T08:54:49.371Z] [shard 2] PAGE 201 attempt 2 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-201?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T08:54:52.374Z] [shard 2] PAGE 201 attempt 3/3 - loading https://www.naukri.com/ai-gen-ai-jobs-201?k=ai+gen+ai+jobs
+[2026-10-29T08:55:05.943Z] [shard 2] PAGE 201 COMPLETED - 20 jobs written
+[2026-10-29T08:55:08.947Z] [shard 2] PAGE 202 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-202?k=ai+gen+ai+jobs
+[2026-10-29T08:55:21.018Z] [shard 2] PAGE 202 COMPLETED - 20 jobs written
+[2026-10-29T08:55:24.021Z] [shard 2] PAGE 203 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-203?k=ai+gen+ai+jobs
+[2026-10-29T08:56:24.123Z] [shard 2] PAGE 203 attempt 1 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-203?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T08:56:27.127Z] [shard 2] PAGE 203 attempt 2/3 - loading https://www.naukri.com/ai-gen-ai-jobs-203?k=ai+gen+ai+jobs
+[2026-10-29T08:56:41.795Z] [shard 2] PAGE 203 COMPLETED - 20 jobs written
+[2026-10-29T08:56:44.796Z] [shard 2] PAGE 204 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-204?k=ai+gen+ai+jobs
+[2026-10-29T08:56:58.103Z] [shard 2] PAGE 204 COMPLETED - 20 jobs written
+[2026-10-29T08:57:01.107Z] [shard 2] PAGE 205 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-205?k=ai+gen+ai+jobs
+[2026-10-29T08:57:14.568Z] [shard 2] PAGE 205 COMPLETED - 20 jobs written
+[2026-10-29T08:57:17.571Z] [shard 2] PAGE 206 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-206?k=ai+gen+ai+jobs
+[2026-10-29T08:57:30.171Z] [shard 2] PAGE 206 COMPLETED - 20 jobs written
+[2026-10-29T08:57:33.174Z] [shard 2] PAGE 207 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-207?k=ai+gen+ai+jobs
+[2026-10-29T08:57:45.562Z] [shard 2] PAGE 207 COMPLETED - 20 jobs written
+[2026-10-29T08:57:48.566Z] [shard 2] PAGE 208 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-208?k=ai+gen+ai+jobs
+[2026-10-29T08:58:01.175Z] [shard 2] PAGE 208 COMPLETED - 20 jobs written
+[2026-10-29T08:58:04.178Z] [shard 2] PAGE 209 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-209?k=ai+gen+ai+jobs
+[2026-10-29T08:58:19.721Z] [shard 2] PAGE 209 COMPLETED - 20 jobs written
+[2026-10-29T08:58:22.724Z] [shard 2] PAGE 210 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-210?k=ai+gen+ai+jobs
+[2026-10-29T08:58:37.741Z] [shard 2] PAGE 210 COMPLETED - 20 jobs written
+[2026-10-29T08:58:40.745Z] [shard 2] PAGE 211 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-211?k=ai+gen+ai+jobs
+[2026-10-29T08:58:53.212Z] [shard 2] PAGE 211 COMPLETED - 20 jobs written
+[2026-10-29T08:58:56.215Z] [shard 2] PAGE 212 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-212?k=ai+gen+ai+jobs
+[2026-10-29T08:59:08.609Z] [shard 2] PAGE 212 COMPLETED - 20 jobs written
+[2026-10-29T08:59:11.612Z] [shard 2] PAGE 213 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-213?k=ai+gen+ai+jobs
+[2026-10-29T08:59:24.969Z] [shard 2] PAGE 213 COMPLETED - 20 jobs written
+[2026-10-29T08:59:27.971Z] [shard 2] PAGE 214 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-214?k=ai+gen+ai+jobs
+[2026-10-29T08:59:40.539Z] [shard 2] PAGE 214 COMPLETED - 20 jobs written
+[2026-10-29T08:59:43.542Z] [shard 2] PAGE 215 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-215?k=ai+gen+ai+jobs
+[2026-10-29T08:59:56.141Z] [shard 2] PAGE 215 COMPLETED - 20 jobs written
+[2026-10-29T08:59:59.144Z] [shard 2] PAGE 216 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-216?k=ai+gen+ai+jobs
+[2026-10-29T09:00:11.370Z] [shard 2] PAGE 216 COMPLETED - 20 jobs written
+[2026-10-29T09:00:14.373Z] [shard 2] PAGE 217 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-217?k=ai+gen+ai+jobs
+[2026-10-29T09:00:30.349Z] [shard 2] PAGE 217 COMPLETED - 20 jobs written
+[2026-10-29T09:00:33.352Z] [shard 2] PAGE 218 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-218?k=ai+gen+ai+jobs
+[2026-10-29T09:00:45.870Z] [shard 2] PAGE 218 COMPLETED - 20 jobs written
+[2026-10-29T09:00:48.873Z] [shard 2] PAGE 219 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-219?k=ai+gen+ai+jobs
+[2026-10-29T09:01:48.941Z] [shard 2] PAGE 219 attempt 1 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-219?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T09:01:51.945Z] [shard 2] PAGE 219 attempt 2/3 - loading https://www.naukri.com/ai-gen-ai-jobs-219?k=ai+gen+ai+jobs
+[2026-10-29T09:02:04.237Z] [shard 2] PAGE 219 COMPLETED - 20 jobs written
+[2026-10-29T09:02:07.240Z] [shard 2] PAGE 220 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-220?k=ai+gen+ai+jobs
+[2026-10-29T09:02:27.163Z] [shard 2] PAGE 220 COMPLETED - 20 jobs written
+[2026-10-29T09:02:30.166Z] [shard 2] PAGE 221 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-221?k=ai+gen+ai+jobs
+[2026-10-29T09:03:30.238Z] [shard 2] PAGE 221 attempt 1 - ERROR: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.naukri.com/ai-gen-ai-jobs-221?k=ai+gen+ai+jobs", waiting until "networkidle"
+
+[2026-10-29T09:03:33.242Z] [shard 2] PAGE 221 attempt 2/3 - loading https://www.naukri.com/ai-gen-ai-jobs-221?k=ai+gen+ai+jobs
+[2026-10-29T09:03:45.648Z] [shard 2] PAGE 221 COMPLETED - 20 jobs written
+[2026-10-29T09:03:48.651Z] [shard 2] PAGE 222 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-222?k=ai+gen+ai+jobs
+[2026-10-29T09:04:02.075Z] [shard 2] PAGE 222 COMPLETED - 20 jobs written
+[2026-10-29T09:04:05.078Z] [shard 2] PAGE 223 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-223?k=ai+gen+ai+jobs
+[2026-10-29T09:04:23.184Z] [shard 2] PAGE 223 COMPLETED - 20 jobs written
+[2026-10-29T09:04:26.188Z] [shard 2] PAGE 224 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-224?k=ai+gen+ai+jobs
+[2026-10-29T09:04:40.510Z] [shard 2] PAGE 224 COMPLETED - 20 jobs written
+[2026-10-29T09:04:43.513Z] [shard 2] PAGE 225 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-225?k=ai+gen+ai+jobs
+[2026-10-29T09:04:56.754Z] [shard 2] PAGE 225 COMPLETED - 20 jobs written
+[2026-10-29T09:04:59.757Z] [shard 2] PAGE 226 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-226?k=ai+gen+ai+jobs
+[2026-10-29T09:05:12.682Z] [shard 2] PAGE 226 COMPLETED - 20 jobs written
+[2026-10-29T09:05:15.685Z] [shard 2] PAGE 227 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-227?k=ai+gen+ai+jobs
+[2026-10-29T09:05:28.425Z] [shard 2] PAGE 227 COMPLETED - 20 jobs written
+[2026-10-29T09:05:31.428Z] [shard 2] PAGE 228 attempt 1/3 - loading https://www.naukri.com/ai-gen-ai-jobs-228?k=ai+gen+ai+jobs
+[2026-10-29T09:05:43.662Z] [shard 2] PAGE 228 COMPLETED - 20 jobs written
+[2026-10-29T09:05:46.665Z] [shard 2] Run finished. Page range targeted: 115-228. Completed pages: [115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228]
