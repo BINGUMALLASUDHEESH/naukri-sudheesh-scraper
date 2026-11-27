@@ -59,8 +59,9 @@ const CONFIG = {
 
   BASE_KEYWORD_PARAM: 'k=ai%20gen%20ai%20jobs',
   BASE_KEYWORD_PARAM_PLUS: 'k=ai+gen+ai+jobs',
-  FIRST_PAGE_URL: 'https://www.naukri.com/ai-gen-ai-jobs?k=ai%20gen%20ai%20jobs',
-  PAGE_URL_TEMPLATE: (n) => `https://www.naukri.com/ai-gen-ai-jobs-${n}?k=ai+gen+ai+jobs`,
+ FIRST_PAGE_URL: 'https://www.naukri.com/fresher-entry-level-jobs-in-hyderabad-secunderabad?k=fresher%2C%20entry%20level&l=hyderabad&experience=0',
+
+PAGE_URL_TEMPLATE: (n) => `https://www.naukri.com/fresher-entry-level-jobs-in-hyderabad-secunderabad-${n}?k=fresher%2C%20entry%20level&l=hyderabad&experience=0`,
   JOBS_PER_PAGE_FALLBACK: 20, // used only to estimate total pages if 'ALL' is requested / resolve mode
 
   OUTPUT_DIR: __dirname,
